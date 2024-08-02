@@ -13,32 +13,32 @@
         compatible = "zmk,keymap";
 
         default_layer {
-// -------------------
-// | 7      |  8  |  9  |     |
-// | 4      |  5  |  6  |     |
-// | 1      |  2  |  3  |     |
-// | MO(1)  |  0  |  .  |     |
+// ------------------- #0
+// |   ESC    |  ⬆  |       |  PREV   |
+// |    ⬅    |  ⬇  |  ⮕   |  PL/PA  | (play/pause)
+// |          |     |       |  SKIP   |
+// |  LT(1)   |     |       |         |
 // ----------------------
             bindings = <
-    &kp N7 &kp N8 &kp N9 &none
-    &kp N4 &kp N5 &kp N6 &none
-    &kp N1 &kp N2 &kp N3 &none
-    &mo 1  &kp N0 &kp DOT &none
+    &kp SPACE &kp UP &none &kp C_PREV
+    &kp LEFT &KP DOWN &kp RIGHT &kp C_PP
+    &none &none &none &kp C_FF
+    &lt 1 LWIN &none &none &none
             >;
         };
 
-        nav_layer {
-// -----------------------
-// | BTNXT |  HOME  |  PGUP  |     |
-// | BTPRV |  END   |  PGDN  |     |
-// | BTCLR |  _     |  _     |     |
-// | _     |  _     |  RET   |     |
+        calc_layer {
+// ----------------------- #1
+// |  7  |  8  |  9  |  /  |
+// |  4  |  5  |  6  |  *  |
+// |  1  |  2  |  3  |  -  |
+// |  T  |  0  |  .  |  +  |
 // -----------------------
             bindings = <
-    &bt BT_NXT &kp HOME &kp PG_UP &none
-    &bt BT_PRV &kp END  &kp PG_DN &none
-    &bt BT_CLR &trans   &trans &none
-    &trans     &trans   &kp RET &none
+    &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_DIVIDE
+    &bt KP_N4 &kp KP_N5  &kp KP_N6 &kp KP_MULTIPLY
+    &bt KP_N1 &kp KP_N2   &kp KP_N3 &kp KP_MINUS
+    &trans &kp KP_N0 &kp . &kp KP_PLUS
             >;
         };
     };
