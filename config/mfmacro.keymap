@@ -21,7 +21,7 @@
 // ----------------------
             bindings = <
     &kp SPACE &kp UP &none &kp C_PREV
-    &kp LEFT &KP DOWN &kp RIGHT &kp C_PP
+    &kp LEFT &kp DOWN &kp RIGHT &kp C_PP
     &none &none &none &kp C_FF
     &lt 1 LWIN &none &none &none
             >;
