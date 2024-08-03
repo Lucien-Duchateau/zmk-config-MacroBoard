@@ -1,3 +1,4 @@
+
 /*
  * Copyright (c) 2020 The ZMK Contributors
  *
@@ -13,23 +14,49 @@
         compatible = "zmk,keymap";
 
         default_layer {
-          bindings = <
-            &mo 1 &kp N &kp O &kp P
-            &kp I &kp J &kp K &kp L
-            &kp E &kp F &kp G &kp H
-            &kp A &kp B &kp C &kp D
-          >;
+// ---------------------------------------- #0
+// |   ESC           |    ⬆           |              |  PREV   |
+// |    ⬅            |    ⬇           |  ⮕           |  PL/PA  | (play/pause)
+// |    BT(PREV)     |    BT(CLR)     |    BT(NXT)   |  SKIP   |
+// |  LT(1)          |  MO(2)         |              |         |
+// ----------------------------------------
+            bindings = <
+&lt 1 LWIN &mo 2 &none &none
+&BT_PRV &BT_CLR_ALL &BT_NXT &kp C_FF
+&kp LEFT &kp DOWN &kp RIGHT &kp C_PP
+&kp ESC &kp UP &none &kp C_PREV
+            >;
         };
 
-        test_layer {
-          bindings = <
-            &trans &kp N1 &kp N1 &kp N1
-            &kp N1 &kp N1 &kp N1 &kp N1
-            &kp N1 &kp N1 &kp N1 &kp N1
-            &kp N1 &kp N1 &kp N1 &kp N1
-          >;
+        calc_layer {
+// ----------------------- #1
+// |  7  |  8  |  9  |  /  |
+// |  4  |  5  |  6  |  *  |
+// |  1  |  2  |  3  |  -  |
+// |  T  |  0  |  .  |  +  |
+// -----------------------
+            bindings = <
+&trans &kp N0 &kp PERIOD &kp PLUS
+&kp N1 &kp N2   &kp N3 &kp MINUS
+&kp N4 &kp N5  &kp N6 &kp KP_MULTIPLY
+&kp N7 &kp N8 &kp N9 &kp KP_DIVIDE
+            >;
         };
 
+        f_layer {
+// ----------------------- #2
+// | F13 | F14 | F15 | F16 |
+// | F17 | F18 | F19 | F20 |
+// | F21 | F22 | F23 | F24 |
+// |     |  T  |     |     |
+// -----------------------
+            bindings = <
+&none &trans &none &none
+&kp F21 &kp F22 &kp F23 &kp F24
+&kp F17 &kp F18 &kp F19 &kp F20
+&kp F13 &kp F14 &kp F15 &kp F16
+            >;
+        };
     };
 };
 
