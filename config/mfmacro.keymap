@@ -14,12 +14,21 @@
 
         default_layer {
             bindings = <
-              &kp A &kp B &kp C &kp D
-              &kp E &kp F &kp G &kp H
+              &mo 1 &kp N &kp O &kp P
               &kp I &kp J &kp K &kp L
-              &kp M &kp N &kp O &kp P
+              &kp E &kp F &kp G &kp H
+              &kp A &kp B &kp C &kp D
             >;
         };
+
+        test_layer {
+          bindings = <
+            &mo 1 &kp 1 &kp 1 &kp 1
+            &kp 1 &kp 1 &kp 1 &kp 1
+            &kp 1 &kp 1 &kp 1 &kp 1
+            &kp 1 &kp 1 &kp 1 &kp 1
+          >;
+        }
 
     };
 };
