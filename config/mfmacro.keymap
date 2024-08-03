@@ -26,20 +26,20 @@
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&mo 3>, <&kp LSHIFT>;
-        mods = <(ALT)>;
+        mods = <(LALT)>;
       };
       talt: alt_tab {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&kp ESC>, <&kp TAB>;
-        mods = <(ALT)>;
+        mods = <(LALT)>;
       };
       mialt: mini_alt {
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
         flavor = "hold-preferred";
         tapping-term-ms = <200>;
-        bindings = <&kp>, <&mini>;
+        bindings = <&kp>, <&kp>;
         display-name = "Mini Alt";
       };
     };
@@ -57,7 +57,7 @@
                 &lt 1 LWIN &mo 2 &calt &lt 4 SPACE
                 &kp C_PREV &kp C_PP &kp C_FF &bt BT_NXT 
                 &kp LEFT &kp DOWN &kp RIGHT &bt BT_CLR_ALL
-                &talt &kp UP &kp LALT &bt BT_PRV
+                &talt &kp UP &mialt 1 2 &bt BT_PRV
             >;
         };
 
