@@ -23,7 +23,7 @@
 
         test_layer {
           bindings = <
-            &mo 1 &kp 1 &kp 1 &kp 1
+            &trans &kp 1 &kp 1 &kp 1
             &kp 1 &kp 1 &kp 1 &kp 1
             &kp 1 &kp 1 &kp 1 &kp 1
             &kp 1 &kp 1 &kp 1 &kp 1
