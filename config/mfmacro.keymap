@@ -22,7 +22,7 @@
 // ----------------------------------------
             bindings = <
                 &lt 1 LWIN &mo 2 &none &none
-                &BT_PRV &BT_CLR_ALL &BT_NXT &kp C_FF
+                &bt BT_PRV &bt BT_CLR_ALL &bt BT_NXT &kp C_FF
                 &kp LEFT &kp DOWN &kp RIGHT &kp C_PP
                 &kp ESC &kp UP &none &kp C_PREV
             >;
