@@ -26,13 +26,13 @@
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&mo 3>, <&kp LSHIFT>;
-        mods = <(LALT)>;
+        mods = <(ALT)>;
       };
       talt: alt_tab {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&kp ESC>, <&kp TAB>;
-        mods = <(LALT)>;
+        mods = <(ALT)>;
       };
       mialt: mini_alt {
         compatible = "zmk,behavior-hold-tap";
