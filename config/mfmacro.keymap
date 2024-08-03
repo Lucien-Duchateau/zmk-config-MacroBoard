@@ -13,12 +13,12 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            bindings = <
-              &mo 1 &kp N &kp O &kp P
-              &kp I &kp J &kp K &kp L
-              &kp E &kp F &kp G &kp H
-              &kp A &kp B &kp C &kp D
-            >;
+          bindings = <
+            &mo 1 &kp N &kp O &kp P
+            &kp I &kp J &kp K &kp L
+            &kp E &kp F &kp G &kp H
+            &kp A &kp B &kp C &kp D
+          >;
         };
 
         test_layer {
