@@ -36,12 +36,12 @@
         mods = <(MOD_LALT)>;
         keep-mods = <(MOD_LALT)>;
       };
-      mialt: mini_alt {
+      minalt: mini_alt {
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
         flavor = "hold-preferred";
         tapping-term-ms = <200>;
-        bindings = <&kp>, <&kp>;
+        bindings = <&kp>, <&mini>;
         display-name = "Mini Alt";
       };
     };
@@ -50,16 +50,16 @@
 
         default_layer {
 // ----------------------------------------
-// |   TALT       |   ⬆      |  ALT   |  BT(PREV)  |
-// |   ⬅          |   ⬇      |   ⮕    |  BT(CLR)   |
-// |   PREV       |   PL/PA  |  NEXT  |  BT(NXT)   |
-// |   LT(1)      |   MO(2)  |  CALT  |  LT(MO4SP) |
+// |   TALT       |   ⬆      |  MINALT   |  BT(PREV)  |
+// |   ⬅          |   ⬇      |   ⮕       |  BT(CLR)   |
+// |   PREV       |   PL/PA  |  NEXT     |  BT(NXT)   |
+// |   LT(1)      |   MO(2)  |  CALT     |  LT(MO4SP) |
 // ----------------------------------------
             bindings = <
                 &lt 1 LWIN &mo 2 &calt &lt 4 SPACE
                 &kp C_PREV &kp C_PP &kp C_FF &bt BT_NXT 
                 &kp LEFT &kp DOWN &kp RIGHT &bt BT_CLR_ALL
-                &talt &kp UP &kp LALT &bt BT_PRV
+                &talt &kp UP &minalt LALT 0 &bt BT_PRV
             >;
         };
 
