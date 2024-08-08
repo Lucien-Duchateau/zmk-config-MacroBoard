@@ -63,6 +63,17 @@
                 , <&macro_release &kp LWIN>
                 ;
         };
+        mright: move_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHIFT>
+                , <&macro_press &kp LWIN>
+                , <&macro_tap &kp RIGHT>
+                , <&macro_release &kp LSHIFT>
+                , <&macro_release &kp LWIN>
+                ;
+        };
     };
   behaviors {
       calt: alt_shift {
@@ -137,14 +148,14 @@
         };
         layer_3 {
 // ----------------------- #3
-// | 1 | 2 | 3 | SEARCH |
-// | 4 | 5 | 6 | ENTER  |
-// | 7 | 8 | 9 | F13    |
-// |   |   | T |        |
+// | 1  | 2  | 3 | SEARCH |
+// | 4  | 5  | 6 | ENTER  |
+// | 7  | 8  | 9 | F13    |
+// | ML | MR | T |        |
 // -----------------------
 
             bindings = <
-                &none &none &trans &none
+                &mleft &mright &trans &none
                 &kp N7 &kp N8 &kp N9 &kp ENTER
                 &kp N4 &kp N5 &kp N6 &kp F13
                 &kp N1 &kp N2 &kp N3 &search
