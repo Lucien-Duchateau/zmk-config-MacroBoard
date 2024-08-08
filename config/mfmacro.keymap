@@ -98,6 +98,14 @@
         bindings = <&kp>, <&mini>;
         display-name = "Mini Alt";
       };
+      leri: left_right {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        flavor = "hold-preferred";
+        tapping-term-ms = <200>;
+        bindings = <&kp>, <&kp>;
+        display-name = "Left Right";
+      };
     };
   keymap {
         compatible = "zmk,keymap";
@@ -150,14 +158,14 @@
 // ----------------------- #3
 // | 1  | 2  | 3 | SEARCH |
 // | 4  | 5  | 6 | ENTER  |
-// | 7  | 8  | 9 | F13    |
-// | ML | MR | T |        |
+// | 7  | 8  | 9 | LERI   |
+// | ML | MR | T | F16    |
 // -----------------------
 
             bindings = <
-                &mleft &mright &trans &none
+                &mleft &mright &trans &kp F16
                 &kp N7 &kp N8 &kp N9 &kp ENTER
-                &kp N4 &kp N5 &kp N6 &kp F13
+                &kp N4 &kp N5 &kp N6 &leri F15 F13
                 &kp N1 &kp N2 &kp N3 &search
             >;
         };
