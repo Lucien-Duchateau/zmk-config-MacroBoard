@@ -39,6 +39,19 @@
                 , <&macro_release &kp LWIN>
                 ;
         };
+        search: start_viewfind {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_press &kp LSHIFT>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp F13>
+                , <&macro_release &kp LCTRL>
+                , <&macro_release &kp LSHIFT>
+                , <&macro_release &kp LALT>
+                ;
+        };
     };
   behaviors {
       calt: alt_shift {
@@ -121,17 +134,17 @@
         };
         layer_3 {
 // ----------------------- #3
-// | N/A | N/A | N/A | N/A |
-// | N/A | N/A | N/A | N/A |
-// | N/A | N/A | N/A | N/A |
-// |     |     |  T  |     |
+// | 1 | 2 | 3 | SEARCH |
+// | 4 | 5 | 6 | ENTER  |
+// | 7 | 8 | 9 | F14    |
+// |   |   | T |        |
 // -----------------------
 
             bindings = <
                 &none &none &trans &none
-                &none &none &none &none
-                &none &none &none &none
-                &kp N1 &none &none &none
+                &kp N7 &kp N8 &kp N9 &kp ENTER
+                &kp N4 &kp N5 &kp N6 &kp F14
+                &kp N1 &kp N2 &kp N3 &search
             >;
         };
         layer_4 {
